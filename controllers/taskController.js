@@ -110,3 +110,22 @@ exports.updateTask = async (req, res) => {
     catch (error) { return res.status(401).send({result: "failed", status:401, error}) }
     
 }
+
+exports.getAllTasks = async (req, res) => {
+    // Get user id from token to find all tasks for this user
+    let user_id = await jwt.verify(req.headers['x-auth-token'], process.env.PRIVATE_KEY).id;
+
+    try {
+        let user = await User.findById(user_id)
+        if(!user) return res.status(404).send({result:'User not found !!'})
+        // Get all tasks for logged user 
+
+        let tasks = await Task.find({user:user_id})
+        if(!tasks) return res.status(404).send({result:'No Tasks Found !!'})
+
+        res.send({result:"success", data:tasks})
+        
+    } catch (error) {
+        return res.status(403).send({result:'failed', message:error})
+    }
+}

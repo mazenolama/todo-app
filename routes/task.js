@@ -15,4 +15,7 @@ router.delete('/task/:id', verifyToken, taskController.deleteTask)
 // UPDATE TASK
 router.put( '/task/:id', verifyToken, taskController.updateTask)
 
+// GET ALL TASKS
+router.get('/tasks', verifyToken, taskController.getAllTasks)
+
 module.exports = router
