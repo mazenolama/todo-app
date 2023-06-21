@@ -1,5 +1,5 @@
-# To-Do App REST-APIs
-Nodejs todo-app-unifi APIs that allows API consumers to interact with the application, behind the scene it uses Nodejs, Express and MongoDB.
+# To-Do App
+To-Do using Restful APIs that allows API consumers to interact with the application, behind the scene it uses Nodejs, Express and MongoDB.
 
 ## Dependecies
 [NodeJs](https://nodejs.org/en/) - A JavaScript runtime environment\
@@ -17,6 +17,8 @@ to setup this project, run the following commands on your terminal
 ```
 I recommend that you use [POSTMAN](https://www.postman.com/) for testing this todo-app-unifi api or you can hook it up to your front-end application like [Angular](https://angular.io/).
 
+I have leveraged the ID of the authenticated user to execute CRUD (Create, Read, Update, Delete) operations on thier To-Do tasks. 
+This guarantees precise management and tracking of the tasks within the user's authenticated account.
 
 ## Author
 [Mazen Olama]
