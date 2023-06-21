@@ -17,7 +17,7 @@ to setup this project, run the following commands on your terminal
 ```
 I recommend that you use [POSTMAN](https://www.postman.com/) for testing this todo-app-unifi api or you can hook it up to your front-end application like [Angular](https://angular.io/).
 
-I have leveraged the ID of the authenticated user to execute CRUD (Create, Read, Update, Delete) operations on thier To-Do tasks. 
+I have utilized the ID of the authenticated user by extracting from requested x-auth-token header to execute CRUD (Create, Read, Update, Delete) operations on thier To-Do tasks. 
 This guarantees precise management and tracking of the tasks within the user's authenticated account.
 
 ## Author
